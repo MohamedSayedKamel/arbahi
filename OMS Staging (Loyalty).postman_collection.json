@@ -1,0 +1,325 @@
+{
+	"info": {
+		"_postman_id": "93745d80-d87f-4855-8635-df7c54439dd7",
+		"name": "OMS Staging (Loyalty)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2848176"
+	},
+	"item": [
+		{
+			"name": "LoyaltyCustomers",
+			"item": [
+				{
+					"name": "GetByMobile",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "{{x-api-key}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/LoyaltyCustomers/GetByMobile/0501076360",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"LoyaltyCustomers",
+								"GetByMobile",
+								"0501076360"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetById",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "{{x-api-key}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/LoyaltyCustomers/7239180",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"LoyaltyCustomers",
+								"7239180"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetBalance",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "{{x-api-key}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/LoyaltyCustomers/7239180/Balance",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"LoyaltyCustomers",
+								"7239180",
+								"Balance"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Transactions",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "{{x-api-key}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/LoyaltyCustomers/7239180/transactions",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"LoyaltyCustomers",
+								"7239180",
+								"transactions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AddCustomer",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "{{x-api-key}}",
+								"type": "text"
+							},
+							{
+								"key": "storecode",
+								"value": "P001",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "staffid",
+								"value": "4040",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"loyaltyName\": \"Mohammed Yasin\",\r\n  \"firstName\": \"\",\r\n  \"lastName\": \"\",\r\n  \"phone1\": \"0501076369\",\r\n  \"email\": null,\r\n  \"gender\": \"Male\",\r\n  \"city\": \"Dammam\",\r\n  \"nationality\": \"Jordan\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/LoyaltyCustomers",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"LoyaltyCustomers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateCustomer",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "{{x-api-key}}",
+								"type": "text"
+							},
+							{
+								"key": "storecode",
+								"value": "P001",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "staffid",
+								"value": "4040",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"loyaltyID\": \"2000000006\",\r\n        \"loyaltyName\": \"Mohammed Yasin\",\r\n        \"firstName\": \"\",\r\n        \"lastName\": \"\",\r\n        \"phone1\": \"0501076360\",\r\n        \"email\": null,\r\n        \"gender\": \"Male\",\r\n        \"city\": \"Dammam\",\r\n        \"nationality\": \"Jordan\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/LoyaltyCustomers/2000000006",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"LoyaltyCustomers",
+								"2000000006"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Redeem",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "{{x-api-key}}",
+								"type": "text"
+							},
+							{
+								"key": "storecode",
+								"value": "P001",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "staffid",
+								"value": "4040",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"loyaltyId\": \"7239180\",\r\n  \"PointsAmount\": 30,\r\n  \"ReferenceNumber\" : \"cart no\", // cart no#.\r\n  \"OrderNumber\" : \"88888888\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/LoyaltyCustomers/Redeem",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"LoyaltyCustomers",
+								"Redeem"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ReverseRedemption",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "{{x-api-key}}",
+								"type": "text"
+							},
+							{
+								"key": "storecode",
+								"value": "P001",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "staffid",
+								"value": "4040",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"transactionId\": 37,\r\n  \"ReferenceNumber\" : \"Test\",\r\n  \"ReverseAmount\" : 15\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/LoyaltyCustomers/ReverseRedemption",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"LoyaltyCustomers",
+								"ReverseRedemption"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "https://staging-oms.al-dawaa.com",
+			"type": "string"
+		},
+		{
+			"key": "x-api-key",
+			"value": "98a6b9c00e944608be91db86a2e70968",
+			"type": "string"
+		}
+	]
+}
